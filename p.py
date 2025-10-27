@@ -24,7 +24,6 @@ def pk(sn,dk=0):
             import time
             s+=str(int(time.time()))+' '+':'.join([str(l) for l in ps[k][0]])+' '+p+'\n'
             print(p+'\r')
-
     curses.endwin()
     open(sn,'a').write('')
 if __name__=="__main__":
