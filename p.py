@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 def vk(v):
     pass
-def pk(sn):
+def pk(sn,dk=0):
     s=''
-    k=0
+    k=dk
     pk=0
     ps=[]
     sp=False
@@ -23,10 +23,14 @@ def pk(sn):
         elif ord(p)>=ord('0') and ord(p)<=ord('9'):
             import time
             s+=str(int(time.time()))+' '+':'.join([str(l) for l in ps[k][0]])+' '+p+'\n'
+            print(p+'\r')
 
     curses.endwin()
     open(sn,'a').write('')
 if __name__=="__main__":
     import sys
-    if len(sys.argv)>1:
+    if len(sys.argv)>2:
+        pk(sys.argv[1],sys.argv[2])
+    elif len(sys.argv)>1:
         pk(sys.argv[1])
+
