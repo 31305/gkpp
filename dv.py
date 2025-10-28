@@ -2,10 +2,11 @@
 gs=0
 gk=0
 gg=[]
+ngg={}
+k=0
 d=False
 ps=[
         ['https://w.wiki/FqF8',[[56,1,70,68,44,1,43,5,70,3,75],[75,1,55,53,1,45,1,43,5,70,3,75]],2],
-        ['https://w.wiki/FqGh',[[73,44,2,50,75,3,53,13,71,66,1,77],[4,44,43,1,74,1,65,2,77]],1],
     ]
 def pk():
     from os import system
@@ -23,6 +24,27 @@ def gss(p):
 def dd(k):
     from os import system
     system('explorer.exe ds\\\\'+str(k+1)+'.jpg')
+def tpk():
+    pk=0
+    global k,ngg
+    while True:
+        t=sys.stdin.readline()
+        if t=='\n':
+            p.vk(ps[k][1][pk])
+            pk=(pk+1)%len(ps[k][1])
+        elif t=='n':break
+        elif len(t)>=3:
+            t=t.split(' ')
+            gk=int(t[0])
+            pt=int(t[1])
+            if pt==ps[k][2]:
+                ngg[gk]+=1
+                k+=1
+                pk=0
+                if k==len(ps):break
+            else: 
+                ngg[gk]-=2
+    pass
 def pp(k):
     print('pp')
     import sys,p
