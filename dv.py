@@ -22,7 +22,8 @@ def gss(p):
     gs=p
     gg=[0]*gs
 def dd(k):
-    pass
+    from os import system
+    system('powershell.exe -c "ii ds/'+str(k+1)+'.jpg"')
 def pp(k):
     print('pp')
     import sys,p
@@ -71,6 +72,5 @@ def pmk():
                 break
         gk+=1
         if gk==gs:gk=0
-
 if __name__=="__main__":
     pmk()
