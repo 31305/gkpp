@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
+vn='sksl'
+import os.path
+if os.path.isfile('sksl'):vn='./sksl'
 def vk(v):
     print(str(v)+'\r')
     from os import system
-    system('echo '+' '.join([str(s) for s in v])+'|./sksl tk.wav && play tk.wav')
+    system('echo '+' '.join([str(s) for s in v])+'|'+vn+' tk.wav && play tk.wav')
 def pk(sn,dk=0):
     s=''
     k=dk
