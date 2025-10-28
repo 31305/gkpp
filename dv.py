@@ -2,12 +2,9 @@
 gs=0
 gk=0
 gg=[]
-ps=[]
-def sl(gs):
-    import random
-    global ps
-    for k in range(0,gs*10):
-        ps+=[['',[[1],[2],[3]],random.randint(1,3)]]
+ps=[
+        ['https://w.wiki/FqF8',[[56,1,70,68,44,1,43,5,70,3,75],[75,1,55,53,1,45,1,43,5,70,3,75]],2]
+    ]
 def pk():
     from os import system
     import os.path
@@ -23,12 +20,12 @@ def gss(p):
     gg=[0]*gs
 def dd(k):
     from os import system
-    system('powershell.exe -c "ii ds/'+str(k+1)+'.jpg"')
+    system('explorer.exe ds\\\\'+str(k+1)+'.jpg')
 def pp(k):
     print('pp')
     import sys,p
     pk=0
-    while True:
+    while pk<len(ps[k][1]):
         t=sys.stdin.readline()
         if t=='\n':
             p.vk(ps[k][1][pk])
@@ -72,5 +69,6 @@ def pmk():
                 break
         gk+=1
         if gk==gs:gk=0
+    print('gg '+str(gg))
 if __name__=="__main__":
     pmk()
