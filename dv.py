@@ -25,17 +25,20 @@ def dd(k):
     from os import system
     system('explorer.exe ds\\\\'+str(k+1)+'.jpg')
 def tpk():
+    import sys,p
     pk=0
     global k,ngg
     while True:
+        print(('k',k+1),('ngg',ngg))
         t=sys.stdin.readline()
         if t=='\n':
             p.vk(ps[k][1][pk])
             pk=(pk+1)%len(ps[k][1])
-        elif t=='n':break
+        elif t=='n\n':break
         elif len(t)>=3:
             t=t.split(' ')
             gk=int(t[0])
+            if not gk in ngg:ngg[gk]=0
             pt=int(t[1])
             if pt==ps[k][2]:
                 ngg[gk]+=1
@@ -44,7 +47,7 @@ def tpk():
                 if k==len(ps):break
             else: 
                 ngg[gk]-=2
-    pass
+    print(('ngg',ngg))
 def pp(k):
     print('pp')
     import sys,p
