@@ -2,8 +2,10 @@
 gs=0
 gk=0
 gg=[]
+d=False
 ps=[
-        ['https://w.wiki/FqF8',[[56,1,70,68,44,1,43,5,70,3,75],[75,1,55,53,1,45,1,43,5,70,3,75]],2]
+        ['https://w.wiki/FqF8',[[56,1,70,68,44,1,43,5,70,3,75],[75,1,55,53,1,45,1,43,5,70,3,75]],2],
+        ['https://w.wiki/FqGh',[[73,44,2,50,75,3,53,13,71,66,1,77],[4,44,43,1,74,1,65,2,77]],1],
     ]
 def pk():
     from os import system
@@ -46,7 +48,7 @@ def pmk():
         tgk=gk
         pg=[False]*gs
         pgs=0
-        dd(k)
+        if d:dd(k)
         while True:
             print('gg '+str(gg))
             print('k ' +str(k+1))
