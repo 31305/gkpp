@@ -42,6 +42,21 @@ def pk():
         dn=ps[k][0]
         dn='"'+dn+'"'
         system('wget -O ds/'+str(k+1).zfill(knns)+'.jpg '+dn)
+def dnl():
+    import os,sys
+    sys.path.append(os.path.abspath('../lsk'))
+    import lsk
+    from indic_transliteration import sanscript
+    tp=''
+    for k in range(0,len(ps)):
+        tp+='<img style=\'max-height:100vh;max-width:100vw\' src='+str(k+1).zfill(knns)+'.jpg></img><p>\n'
+        for pk in range(0,len(ps[k][1])):
+            l=ps[k][1][pk]
+            tp+=sanscript.transliterate(''.join([lsk.pvs[v] for v in l]),sanscript.SLP1,sanscript.DEVANAGARI)
+            if ps[k][2]==pk+1:tp+='*'
+            tp+='\u0964 '
+        tp+='<p>\n'
+    open('ds/tp.html','w').write(tp)
 def gss(p):
     global gs,gg
     gs=p
